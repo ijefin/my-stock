@@ -1,11 +1,37 @@
-export class Appointment {
-  private costumer: string;
-  private startsAt: Date;
-  private endsAt: Date;
+interface AppointmentProps {
+  costumer: string;
+  startsAt: Date;
+  endsAt: Date;
+}
 
-  constructor(costumer: string, startsAt: Date, endsAt: Date) {
-    this.costumer = costumer;
-    this.startsAt = startsAt;
-    this.endsAt = endsAt;
+export class Appointment {
+  private props: AppointmentProps;
+
+  constructor(props: AppointmentProps) {
+    this.props = props;
+  }
+
+  get costumer() {
+    return this.costumer;
+  }
+
+  set costumer(value) {
+    this.props.costumer = value;
+  }
+
+  get startsAt() {
+    return this.startsAt;
+  }
+
+  set startsAt(value) {
+    this.props.startsAt = value;
+  }
+
+  get endsAt() {
+    return this.endsAt;
+  }
+
+  set endsAt(value) {
+    this.props.endsAt = value;
   }
 }
