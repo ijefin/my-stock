@@ -8,30 +8,24 @@ export class Appointment {
   private props: AppointmentProps;
 
   constructor(props: AppointmentProps) {
+    const { startsAt, endsAt } = props;
+
+    if (endsAt <= startsAt) {
+      throw new Error("Tá rolando não!");
+    }
+
     this.props = props;
   }
 
   get costumer() {
-    return this.costumer;
-  }
-
-  set costumer(value) {
-    this.props.costumer = value;
+    return this.props.costumer;
   }
 
   get startsAt() {
-    return this.startsAt;
-  }
-
-  set startsAt(value) {
-    this.props.startsAt = value;
+    return this.props.startsAt;
   }
 
   get endsAt() {
-    return this.endsAt;
-  }
-
-  set endsAt(value) {
-    this.props.endsAt = value;
+    return this.props.endsAt;
   }
 }

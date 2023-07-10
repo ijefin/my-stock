@@ -4,7 +4,7 @@
   "description": "A server to provide req/res to private products plataform.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
