@@ -8,13 +8,13 @@ test("Create an appointment", () => {
   endsAt.setDate(endsAt.getDate() + 3);
 
   const appointment = new Appointment({
-    costumer: "Jeffe",
+    costumer: "John Doe",
     startsAt,
     endsAt,
   });
 
   expect(appointment).instanceOf(Appointment);
-  expect(appointment.costumer).toEqual("Jeffe");
+  expect(appointment.costumer).toEqual("John Doe");
 });
 
 test("End date cannot be less than start date", () => {
@@ -24,7 +24,7 @@ test("End date cannot be less than start date", () => {
   endsAt.setDate(endsAt.getDate() + 1);
 
   new Appointment({
-    costumer: "Jeff",
+    costumer: "John Doe",
     startsAt,
     endsAt,
   });
