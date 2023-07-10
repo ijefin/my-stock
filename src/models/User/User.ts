@@ -9,11 +9,17 @@ export class User {
   constructor(props: UserProps) {
     this.props = props;
 
-    const { name } = props;
+    const { name, email } = props;
 
     if (!name) {
       throw new Error("Nome inválido");
     }
+
+    if (!email.includes("@hotmail.com")) {
+      throw new Error("Email Inválido!");
+    }
+
+    return;
   }
 
   get name() {
