@@ -1,4 +1,4 @@
-interface AppointmentProps {
+export interface AppointmentProps {
   costumer: string;
   startsAt: Date;
   endsAt: Date;
